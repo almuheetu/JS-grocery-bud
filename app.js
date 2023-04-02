@@ -8,12 +8,13 @@ const list = document.querySelector(".grocery-list");
 const clearBtn = document.querySelector(".clear-btn");
 
 // edit option
-
-
-
-
+let editElement;
+let editFlag = false;
+let editID = "";
 
 // ****** EVENT LISTENERS **********
+
+
 
 // ****** FUNCTIONS **********
 
