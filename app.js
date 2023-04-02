@@ -45,8 +45,41 @@ function addItem(e) {
                   </button>
                 </div>
               `;
+        // add event listeners to both buttons;
+        const deleteBtn = element.querySelector(".delete-btn");
+        deleteBtn.addEventListener("click", deleteItem);
+        const editBtn = element.querySelector(".edit-btn");
+        editBtn.addEventListener("click", editItem);
 
+
+        // append child
+        list.appendChild(element);
+        displayAlert("item added to the list", "success");
+
+        // show container
+        container.classList.add("show-container");
+        // set local storage
+        addToLocalStorage(id, value);
+        // set back to default
+        setBackToDefault();
+    } else if (value !== "" && editFlag) {
+        editElement.innerHTML = value;
+        displayAlert("value changed", "success");
+         // edit  local storage
+        editLocalStorage(editID, value);
+        setBackToDefault();
+    } else {
+        displayAlert("please enter value", "danger");
+    
     }
+}
+
+// display alert
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+    
+
 }
 
 // ****** LOCAL STORAGE **********
