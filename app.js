@@ -126,7 +126,14 @@ function editItem(e) {
     editID = element.dataset.id;
     //
     submitBtn.textContent = "edit";
-    
+
+}
+// set backt to defaults
+function setBackToDefault() {
+    grocery.value = "";
+    editFlag = false;
+    editID = "";
+    submitBtn.textContent = "submit";
 }
 // ****** LOCAL STORAGE **********
 
