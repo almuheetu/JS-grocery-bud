@@ -115,6 +115,19 @@ function deleteItem(e) {
     removeFormLocalStorage(id);
 
 }
+// edit item
+function editItem(e) {
+    const element = e.currentTarget.parrentElement.parentElement;
+    // set edit item     
+    editElement = e.currentTarget.parentElement.previousElementSibling;
+    // set form value      
+    grocery.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dataset.id;
+    //
+    submitBtn.textContent = "edit";
+    
+}
 // ****** LOCAL STORAGE **********
 
 // ****** SETUP ITEMS **********
