@@ -193,4 +193,6 @@ function createListItem(id, value) {
    const editBtn = element.querySelector(".edit-btn");
    editBtn.addEventListener("click", editItems);
 
+//    append Child
+list.appendChild(element);
 }
