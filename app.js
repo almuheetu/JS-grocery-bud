@@ -137,4 +137,23 @@ function setBackToDefault() {
 }
 // ****** LOCAL STORAGE **********
 
+// add to local storage
+function addEventListener(id, value) {
+    const grocery = { id, value };
+    let items = getLocalStorage();
+    items.push(grocery);
+    localStorage.setItem("list", JSON.stringify(items));
+}
+function editLocalStorage(id, value) {
+    let items = getLocalStorage();
+
+    items = items.map(function (item) {
+        if (item.id === id) {
+            item.value = value;
+        }
+        return item;
+    });
+    localStorage.setItem("list", JSON.stringify(items));
+}
+
 // ****** SETUP ITEMS **********
