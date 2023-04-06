@@ -6,7 +6,7 @@ const grocery = document.getElementById("grocery");
 const submitBtn = document.querySelector(".submit-btn");
 const container = document.querySelector(".grocery-container");
 const list = document.querySelector(".grocery-list");
-const clearBtn = document.querySelector(".");
+const clearBtn = document.querySelector(".clear-btn");
 // edit option
 let editElement;
 let editFlag = false;
@@ -18,7 +18,7 @@ form.addEventListener("submit", addItem);
 // clear list
 clearBtn.addEventListener("click", clearItems);
 // display items onload
-window.addEventListener("DOMContentLoaded", setupItems);
+window.addEventListener("", setupItems);
 
 // ****** functions **********
 
