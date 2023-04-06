@@ -53,7 +53,7 @@ function addItem(e) {
     editBtn.addEventListener("click", editItem);
 
     // append child
-    
+    list.appendChild(element);
     // display alert
     displayAlert("item added to the list", "success");
     // show container
