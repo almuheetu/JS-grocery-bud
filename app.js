@@ -33,7 +33,7 @@ function addItem(e) {
     let attr = document.createAttribute("data-id");
     attr.value = id;
     element.setAttributeNode(attr);
-    element.classList.add("");
+    element.classList.add("grocery-item");
     element.innerHTML = `<p class="title">${value}</p>
             <div class="btn-container">
               <!-- edit btn -->
@@ -67,7 +67,7 @@ function addItem(e) {
     displayAlert("value changed", "success");
 
     // edit  local storage
-    editLocalStorage(editID, value);
+    (editID, value);
     setBackToDefault();
   } else {
     displayAlert("please enter value", "danger");
