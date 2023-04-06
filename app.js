@@ -53,7 +53,7 @@ function addItem(e) {
     editBtn.addEventListener("click", editItem);
 
     // append child
-    list.appendChild(element);
+    
     // display alert
     displayAlert("item added to the list", "success");
     // show container
@@ -67,7 +67,7 @@ function addItem(e) {
     displayAlert("value changed", "success");
 
     // edit  local storage
-    (editID, value);
+    editLocalStorage(editID, value);
     setBackToDefault();
   } else {
     displayAlert("please enter value", "danger");
