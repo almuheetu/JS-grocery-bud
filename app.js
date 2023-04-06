@@ -18,7 +18,7 @@ form.addEventListener("submit", addItem);
 // clear list
 clearBtn.addEventListener("click", clearItems);
 // display items onload
-window.addEventListener("", setupItems);
+window.addEventListener("DOMContentLoaded", setupItems);
 
 // ****** functions **********
 
@@ -33,7 +33,7 @@ function addItem(e) {
     let attr = document.createAttribute("data-id");
     attr.value = id;
     element.setAttributeNode(attr);
-    element.classList.add("grocery-item");
+    element.classList.add("");
     element.innerHTML = `<p class="title">${value}</p>
             <div class="btn-container">
               <!-- edit btn -->
